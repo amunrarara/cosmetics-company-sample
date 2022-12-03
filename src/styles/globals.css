@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --navbar-height: 4.1rem;
+  }
+
+  {
+    /* Debug options */
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
+
+  html,
+body {
+  font-family: Montserrat, sans-serif;
+  overscroll-behavior: none;
+}
+
+html {
+    color-scheme: dark;
+}
+
+body {
+    color: white;
+    background: #1e2630;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }

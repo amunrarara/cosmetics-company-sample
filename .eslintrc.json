@@ -1,0 +1,9 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:cypress/recommended"],
+  "rules": {
+    "react-hooks/exhaustive-deps": "off"
+  },
+  "globals": {
+    "cy": true
+  }
+}
