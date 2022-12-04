@@ -1,9 +1,13 @@
 import React from 'react'
+import Banner from '@/components/Banner'
 
-type Props = {}
-
-export default function TemplateHomepage({}: Props) {
+export default function SearchPage() {
   return (
-    <div>TemplateHomepage</div>
+    <main>
+      <div className=''>
+        <Banner />
+      </div>
+
+    </main>
   )
 }

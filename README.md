@@ -22,6 +22,10 @@ This is a starter template for NextJS projects. it includes:
 
 That's it!
 
+
+# Folder Structure
+
+
 # Testing
 ## Cypress
 

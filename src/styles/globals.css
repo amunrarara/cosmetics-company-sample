@@ -13,19 +13,14 @@
     outline: solid #f00 1px !important;
   }
 
-  html,
-body {
+html, body {
   font-family: Montserrat, sans-serif;
   overscroll-behavior: none;
 }
 
-html {
-    color-scheme: dark;
-}
-
 body {
     color: white;
-    background: #1e2630;
+    background: hsl(0, 0%, 10%);
   }
 
   a {

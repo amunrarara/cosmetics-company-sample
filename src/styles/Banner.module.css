@@ -1,0 +1,55 @@
+.scrollText {
+  /* All 4 browser platforms included for maximum backwards compatibility  */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: scroll-animation 30s linear infinite;
+  -webkit-animation: scroll-animation 30s linear infinite;
+  -ms-animation: scroll-animation 30s linear infinite;
+  -o-animation: scroll-animation 30s linear infinite;
+  animation: scroll-animation 30s linear infinite;
+}
+
+  /* for Firefox */
+  @-moz-keyframes scroll-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes scroll-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+
+  /* for Internet Explorer */
+  @-ms-keyframes scroll-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+
+  /* for Opera */
+  @-o-keyframes scroll-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+
+  @keyframes scroll-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -ms-o: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
