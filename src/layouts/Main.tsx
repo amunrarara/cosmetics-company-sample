@@ -12,7 +12,7 @@ export default function MainLayout({children}: Props) {
             <Head>
                 <title>Cosmetics Company Template</title>
                 <meta name="description" content="Built by Acea Spades - https://github.com/amunrarara/cosmetics-company-sample.git" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/lipstick.svg" />
             </Head>
             <main>
                 {children}
