@@ -1,3 +1,11 @@
+# Cosmetics Company Code Test
+## Overview
+
+- Search feature
+- Client-side data fetching and caching with useSWR
+- Server-side mock data storage and serving (rudimentary)
+- Visual styling with CSS / Tailwind
+
 # NextJS Template - by Acea Spades
 
 This is a starter template for NextJS projects. it includes:
@@ -16,7 +24,7 @@ This is a starter template for NextJS projects. it includes:
 1. After clining the repo, run `yarn` to install all the dependencies.
     - Not using yarn? Delete `yarn.lock`, then run `npm install` instead. Or, run `npm install -g yarn` to install yarn (it's debatably better than npm; pick your team, green or blue).
 
-2. Run `yarn dev` to start the development server.
+2. Run `yarn dev` to start the development server (default http://localhost:3000)
 
 3. Run `yarn build` to build the project.
 

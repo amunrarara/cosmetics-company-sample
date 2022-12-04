@@ -23,6 +23,7 @@ module.exports = {
       },
       animation: {
         'pulse-slow': 'pulse 3s ease-out infinite',
+        'pulse-fast': 'pulse 0.5s ease-out infinite',
       },
       dropShadow: {
         'dark': '0 3px 3px rgba(0, 0, 0, 0.75)',
