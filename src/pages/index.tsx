@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react'
+import MainLayout from '@/layouts/Main'
 import Banner from '@/components/Banner'
 import fetchProducts from '@/lib/utils/fetchProducts'
 import ProductCard from '@/components/ProductCard'
@@ -8,16 +9,18 @@ import debounce from "lodash/debounce";
 function Content (products: Product[]) {
   if (!products.length) return <h1 className='text-center'>No products match</h1>
   return (
-    <div className='content-grid gap-16 p-4'>
-      {products.map(product => {
-        return (
-          <ProductCard
-            key={product._id}
-            product={product}
-          />
-        )
-      })}
-    </div>
+    <MainLayout>
+      <div className='content-grid gap-16 p-4 pb-8'>
+        {products.map(product => {
+          return (
+            <ProductCard
+              key={product._id}
+              product={product}
+            />
+          )
+        })}
+      </div>
+    </MainLayout>
   )
 }
 
