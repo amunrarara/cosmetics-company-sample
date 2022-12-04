@@ -1,14 +1,15 @@
 # Cosmetics Company Code Test
 ## Overview
 
-- Search feature
-- Client-side data fetching and caching with useSWR
-- Server-side mock data storage and serving (rudimentary)
+- Search by product name, description, and/or tags (rudimentary; exact string match)
+- Server-side mock data storage and serving
 - Visual styling with CSS / Tailwind
+
+There are plenty of improvements that can be made, particularly in the visual style of the ProductCards, but this is a start.
 
 # NextJS Template - by Acea Spades
 
-This is a starter template for NextJS projects. it includes:
+This is based on my personal starter template for NextJS projects. it includes:
 
 - NextJS
 - Typescript
@@ -21,34 +22,11 @@ This is a starter template for NextJS projects. it includes:
 
 # Get Started
 
-1. After clining the repo, run `yarn` to install all the dependencies.
-    - Not using yarn? Delete `yarn.lock`, then run `npm install` instead. Or, run `npm install -g yarn` to install yarn (it's debatably better than npm; pick your team, green or blue).
+1. After cloning the repo, run `yarn` to install all the dependencies.
+    - Not using yarn? Delete `yarn.lock`, then run `npm install` instead. Or, run `npm install -g yarn` to install yarn.
 
 2. Run `yarn dev` to start the development server (default http://localhost:3000)
 
-3. Run `yarn build` to build the project.
+3. Run `yarn build` to build a production version of the project.
 
 That's it!
-
-
-# Folder Structure
-
-
-# Testing
-## Cypress
-
----
-# Precommit Hooks
-## Husky
-### Commitlint?
-I've opted out of using commitlint for the time being, but I may add it in the future.
-
----
-
-# Linting
-
-A combination of ESLint, Prettier, and Husky are used to lint the codebase.
-
-# Styling
-
-Tailwind for most styling, with custom CSS.
