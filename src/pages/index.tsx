@@ -7,7 +7,6 @@ import ProductCard from '@/components/ProductCard'
 import debounce from "lodash/debounce";
 
 function Content (products: Product[]) {
-  if (!products.length) return <h1 className='text-center'>No products match</h1>
   return (
     <MainLayout>
       <div className='content-grid gap-16 p-4 pb-8'>
@@ -27,10 +26,12 @@ function Content (products: Product[]) {
 export default function SearchPage() {
   const [value, setValue] = useState('')
   const [products, setProducts] = useState<Product[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(()=>{
     fetchProducts(value).then((products: Product[]) => {
       setProducts(products)
+      setIsLoading(false)
     })
   },[])
 
@@ -66,6 +67,7 @@ export default function SearchPage() {
           </div>
         </section>
         <section className='px-16'>
+          {isLoading ? <h1>Loading...</h1> : Content(products)}
           {Content(products)}
           </section>
       </div>
