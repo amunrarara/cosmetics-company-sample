@@ -68,8 +68,7 @@ export default function SearchPage() {
         </section>
         <section className='px-16'>
           {isLoading ? <h1>Loading...</h1> : Content(products)}
-          {Content(products)}
-          </section>
+        </section>
       </div>
 
     </main>
