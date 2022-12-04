@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import Banner from '@/components/Banner'
+import fetchProducts from '@/lib/utils/fetchProducts'
 import ProductCard from '@/components/ProductCard'
-import { products } from '@/public/data/data'
+// @ts-ignore-line
+import debounce from "lodash/debounce";
 
-function Content () {
+function Content (products: Product[]) {
+  if (!products.length) return <h1 className='text-center'>No products match</h1>
   return (
     <div className='content-grid gap-16 p-4'>
       {products.map(product => {
@@ -19,6 +22,30 @@ function Content () {
 }
 
 export default function SearchPage() {
+  const [value, setValue] = useState('')
+  const [products, setProducts] = useState<Product[]>([])
+
+  useEffect(()=>{
+    fetchProducts(value).then((products: Product[]) => {
+      setProducts(products)
+    })
+  },[])
+
+  const handleChange = (e: any) => {
+    let { value } = e.target;
+    value = value.toUpperCase().slice(0,42);
+    setValue(value);
+    handleSearch(value);
+  };
+
+  const handleSearch = useCallback(
+    debounce((value: string) => {
+      fetchProducts(value).then((products: Product[]) => {
+        setProducts(products)
+      })
+    }, 500),
+    []
+  );
 
   return (
     <main>
@@ -30,11 +57,14 @@ export default function SearchPage() {
             <input
             type='text'
             className='h-full w-full pl-8 bg-white text-black font-bold text-2xl tracking-widest focus:outline-none'
-            onChange={(e) => (e.target.value = e.target.value.toUpperCase().slice(0,42))}
+            value={value}
+            onChange={handleChange}
             />
           </div>
         </section>
-          {Content()}
+        <section className='px-16'>
+          {Content(products)}
+          </section>
       </div>
 
     </main>

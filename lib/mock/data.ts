@@ -6,7 +6,7 @@ export const products: Product[] = [
         "image": "/img/products/cosmetic-image.png",
         "name": "Damage Reverse Thickening Conditioner",
         "about": "Description for the product...",
-        "tags": [ "ojon", "conditioner", "hair" ]
+        "tags": [ "conditioner", "hair" ]
     },
     {
         "_id": "2",
@@ -15,7 +15,7 @@ export const products: Product[] = [
         "image": "/img/products/cosmetic-image.png",
         "name": "Healing Heads Shampoo",
         "about": "Description for the product...",
-        "tags": [ "ojon", "shampoo", "hair" ]
+        "tags": [ "shampoo", "hair" ]
     },
     {
         "_id": "3",
@@ -24,7 +24,7 @@ export const products: Product[] = [
         "image": "/img/products/cosmetic-image.png",
         "name": "Be Good Serum",
         "about": "Description for the product...",
-        "tags": [ "ojon", "serum", "cream" ]
+        "tags": [ "serum", "cream" ]
     },
     {
         "_id": "4",
@@ -33,6 +33,6 @@ export const products: Product[] = [
         "image": "/img/products/cosmetic-image.png",
         "name": "Showtime Lipstick",
         "about": "Description for the product...",
-        "tags": [ "ojon", "lipstick", "makeup" ]
+        "tags": [ "lipstick", "makeup" ]
     },
 ]
