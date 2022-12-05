@@ -1,6 +1,8 @@
 # Cosmetics Company Code Test
 ## Overview
 
+See the demo here: https://cosmetics-company-template.vercel.app
+
 - Search by product name, description, and/or tags (rudimentary; exact string match)
 - Server-side mock data storage and serving
 - Visual styling with CSS / Tailwind
