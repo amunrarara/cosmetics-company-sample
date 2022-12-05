@@ -9,7 +9,7 @@ import debounce from "lodash/debounce";
 function Content (products: Product[]) {
   return (
     <MainLayout>
-      <div className='content-grid gap-16 p-4 pb-8'>
+      <div className='content-grid gap-4 pb-8'>
         {products.map(product => {
           return (
             <ProductCard
@@ -65,6 +65,7 @@ export default function SearchPage() {
             onChange={handleChange}
             />
           </div>
+          <div className="h-1 w-full bg-white mt-16"></div>
         </section>
         <section className='px-16'>
           {isLoading ? <h1>Loading...</h1> : Content(products)}
